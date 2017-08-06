@@ -6,7 +6,6 @@ const int JoystickY = A1;
 const int SW = 13;
 float X;
 float Y;
-float B;
 
 void setup()
 {
@@ -33,7 +32,6 @@ void loop()
 {
      X =analogRead(JoystickX);
      Y =analogRead(JoystickY);
-     B =digitalRead(SW);
      delay(100); 
 
 // What is going to be on the LCD
