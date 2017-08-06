@@ -1,0 +1,49 @@
+
+#include<LiquidCrystal.h>               //library
+LiquidCrystal lcd (7,8,9,10,11,12);   //declaring LCD pins
+const int JoystickX = A0;  //declaring Analog Joystick pins
+const int JoystickY = A1;  
+const int SW = 13;
+float X;
+float Y;
+float B;
+
+void setup()
+{
+  
+//Joystick
+  pinMode(JoystickX, INPUT);
+  pinMode(JoystickY, INPUT);
+  pinMode(SW, INPUT);
+  digitalWrite(SW, HIGH);
+ 
+//LCD intro
+  lcd.begin(16,2);
+  lcd.setCursor(0,0);
+  lcd.print("    Joystick    ");
+  lcd.setCursor(0,1);
+  lcd.print(" X-Y Coordinates  ");
+  delay(4000);
+  lcd.clear();
+}
+
+
+
+void loop()
+{
+     X =analogRead(JoystickX);
+     Y =analogRead(JoystickY);
+     B =digitalRead(SW);
+     delay(100); 
+
+// What is going to be on the LCD
+  lcd.setCursor(0,0);
+  lcd.print("X-coordinate:");
+  lcd.print(X);
+  delay(100);
+  lcd.setCursor(0,1);
+  lcd.print("Y-coordinate:");
+  lcd.print(Y);
+  delay(100);
+
+}
