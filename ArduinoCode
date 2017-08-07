@@ -22,7 +22,7 @@ void setup()
   lcd.print("    Joystick    ");
   lcd.setCursor(0,1);
   lcd.print(" X-Y Coordinates  ");
-  delay(4000);
+  delay(4000);     
   lcd.clear();
 }
 
@@ -32,7 +32,7 @@ void loop()
 {
      X =analogRead(JoystickX);
      Y =analogRead(JoystickY);
-     delay(1000); 
+     delay(1000); //you can play with the delay time it will read as the joystick is sensitive
 
 // What is going to be on the LCD
   lcd.setCursor(0,0);
@@ -42,6 +42,6 @@ void loop()
   lcd.setCursor(0,1);
   lcd.print("Y-coordinate:");
   lcd.print(Y);
-  delay(1000);
+  delay(1000); //you can play with the delay time it will show in your LCD as well
 
 }
