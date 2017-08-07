@@ -5,4 +5,6 @@ This electronics project is building upon my first project, LCD Thermometer. Wit
 
 I've enjoyed working on this project and I hope this inspires you as well.
 
+See full project here: https://preciousgracebrazil.wordpress.com/project-type/lcd-joystick-controller/
+
 -Precious-
