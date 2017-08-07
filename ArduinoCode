@@ -32,7 +32,7 @@ void loop()
 {
      X =analogRead(JoystickX);
      Y =analogRead(JoystickY);
-     delay(100); 
+     delay(1000); 
 
 // What is going to be on the LCD
   lcd.setCursor(0,0);
@@ -42,6 +42,6 @@ void loop()
   lcd.setCursor(0,1);
   lcd.print("Y-coordinate:");
   lcd.print(Y);
-  delay(100);
+  delay(1000);
 
 }
